@@ -1,0 +1,115 @@
+:root {
+  --text-main-color: #434455;
+  --text-title-color: #2e2f42;
+  --accent-color: #4d5ae5;
+  --text-second-color: #fff;
+}
+body {
+  background-color: #fff;
+}
+
+.list {
+  list-style: none;
+  padding-left: inherit;
+}
+
+.text-main {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--text-main-color);
+}
+
+.text-title-big {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+}
+
+.text-title {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+}
+
+.logo {
+  color: var(--accent-color);
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.33;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.nav-logo {
+  color: var(--text-title-color);
+}
+
+.nav-list a {
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--text-title-color);
+}
+
+.address-list a {
+  text-decoration: none;
+  color: var(--text-title-color);
+}
+
+.hero {
+  background-color: var(--text-title-color);
+}
+
+.hero-title {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 1.07;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: var(--text-second-color);
+}
+
+.hero-button {
+  background-color: var(--accent-color);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  color: var(--text-second-color);
+}
+
+.team {
+  background-color: #f4f4fd;
+  text-align: center;
+}
+
+footer {
+  background-color: var(--text-title-color);
+}
+
+.footer-logo {
+  color: #f4f4fd;
+}
+.footer-text {
+  color: #e7e9fc;
+}
