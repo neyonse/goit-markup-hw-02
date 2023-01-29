@@ -11,7 +11,7 @@
 }
 
 /* Hidden headers */
-.hidden {
+.visually-hidden {
   position: absolute;
   white-space: nowrap;
   width: 1px;
@@ -41,6 +41,8 @@ a {
 
 body {
   font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  letter-spacing: 0.02em;
   color: var(--text-color-site);
 
   background-color: var(--background-site);
@@ -49,30 +51,24 @@ body {
 /* Text styles */
 
 .text-main {
-  font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
-  letter-spacing: 0.02em;
   color: var(--text-main-color);
 }
 
 .text-title-big {
-  font-style: normal;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
   text-align: center;
-  letter-spacing: 0.02em;
   text-transform: capitalize;
 }
 
 .text-title {
-  font-style: normal;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
-  letter-spacing: 0.02em;
   color: var(--text-title-color);
 }
 
@@ -88,8 +84,6 @@ body {
 .button.primary {
   padding: 16px 32px;
 
-  height: 56px;
-
   color: var(--text-second-color);
 
   background-color: var(--accent-color);
@@ -99,8 +93,6 @@ body {
 
 .button.secondary {
   padding: 12px 24px;
-
-  height: 48px;
 
   color: var(--accent-color);
 
@@ -128,8 +120,7 @@ body {
 /* Logo */
 
 .logo {
-  font-family: Raleway;
-  font-style: normal;
+  font-family: 'Raleway', sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 1.33;
@@ -159,17 +150,15 @@ body {
 }
 
 .address-list a {
+  font-style: normal;
   color: var(--text-title-color);
 }
 
 .nav-link:hover,
 .nav-link:focus,
+.nav-link.current,
 .address-link:hover,
 .address-link:focus {
-  color: var(--button-hover-color);
-}
-
-.nav-link.current {
   color: var(--button-hover-color);
 }
 
@@ -180,12 +169,8 @@ body {
 }
 
 .hero-title {
-  font-style: normal;
-  font-weight: 700;
   font-size: 56px;
   line-height: 1.07;
-  text-align: center;
-  letter-spacing: 0.02em;
   color: var(--text-second-color);
 }
 
