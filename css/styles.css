@@ -1,28 +1,54 @@
+/* Variables */
+
 :root {
   --text-main-color: #434455;
   --text-title-color: #2e2f42;
   --accent-color: #4d5ae5;
   --text-second-color: #fff;
   --button-color: #f4f4fd;
-  --button-text-color: #404bbf;
+  --button-hover-color: #404bbf;
   --button-border-color: #e7e9fc;
 }
-body {
-  background-color: #fff;
+
+/* Hidden headers */
+.hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
 }
 
-/* розібратися як правиль сховати */
-.hidden {
-  visibility: hidden;
-}
+/* Lists basic style */
 
 .list {
   list-style: none;
   padding-left: inherit;
 }
 
+/* Links basic style */
+
+a {
+  text-decoration: none;
+}
+
+/* Body basic style */
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--text-color-site);
+
+  background-color: var(--background-site);
+}
+
+/* Text styles */
+
 .text-main {
-  font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -32,7 +58,6 @@ body {
 }
 
 .text-title-big {
-  font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
   font-size: 36px;
@@ -43,86 +68,118 @@ body {
 }
 
 .text-title {
-  font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
-  color: #2e2f42;
+  color: var(--text-title-color);
 }
+
+/* Buttons */
 
 .button {
+  font-family: inherit;
   font-weight: 500;
-  box-sizing: border-box;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 12px 24px;
-
-  width: auto;
-  height: 48px;
-
-  background: var(--button-color);
-
-  border: 1px solid var(--button-border-color);
+  letter-spacing: 0.04em;
   border-radius: 4px;
-
-  flex: none;
-  order: 1;
-  flex-grow: 0;
-  color: var(--button-text-color);
 }
 
-.button:hover,
-.button:focus {
-  align-items: flex-start;
+.button.primary {
+  padding: 16px 32px;
+
+  height: 56px;
+
+  color: var(--text-second-color);
+
+  background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: none;
+}
+
+.button.secondary {
+  padding: 12px 24px;
+
+  height: 48px;
+
+  color: var(--accent-color);
+
+  background-color: var(--button-color);
+  border: 1px solid var(--button-border-color);
+}
+
+.button.primary:hover,
+.button.primary:focus {
+  background-color: var(--button-hover-color);
+  cursor: pointer;
+}
+
+.button.secondary:hover,
+.button.secondary:focus {
+  color: var(--button-color);
+
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
   border: none;
-  background: var(--button-text-color);
-  color: var(--button-color);
+  background-color: var(--button-hover-color);
+  cursor: pointer;
 }
 
+/* Logo */
+
 .logo {
-  color: var(--accent-color);
-  text-transform: uppercase;
-  text-decoration: none;
   font-family: Raleway;
   font-style: normal;
   font-weight: 800;
   font-size: 18px;
   line-height: 1.33;
-  display: flex;
-  align-items: center;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  text-decoration: none;
 }
 
 .nav-logo {
   color: var(--text-title-color);
 }
 
+.footer-logo {
+  color: var(--button-color);
+}
+
+.logo .accent {
+  color: var(--accent-color);
+}
+
+/* Site nav and address */
+
 .nav-list a {
-  text-decoration: none;
   font-size: 16px;
   line-height: 1.5;
   color: var(--text-title-color);
 }
 
 .address-list a {
-  text-decoration: none;
   color: var(--text-title-color);
 }
+
+.nav-link:hover,
+.nav-link:focus,
+.address-link:hover,
+.address-link:focus {
+  color: var(--button-hover-color);
+}
+
+.nav-link.current {
+  color: var(--button-hover-color);
+}
+
+/* Hero */
 
 .hero {
   background-color: var(--text-title-color);
 }
 
 .hero-title {
-  font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
   font-size: 56px;
@@ -132,48 +189,25 @@ body {
   color: var(--text-second-color);
 }
 
-.hero-button {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  padding: 16px 32px;
-  gap: 10px;
-
-  /* position: absolute;
-  width: 169px;
-  height: 56px;
-  left: 636px;
-  top: 428px; */
-
-  background: var(--accent-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  border: none;
-
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  color: var(--text-second-color);
-}
-
-.hero-button:hover,
-.hero-button:focus {
-  background: var(--text-second-color);
-  color: var(--accent-color);
-}
+/* Team section */
 
 .team {
-  background-color: #f4f4fd;
-  text-align: center;
+  background-color: var(--button-color);
 }
 
-footer {
+.team-item {
+  background-color: var(--text-second-color);
+}
+
+/* Footer */
+
+.footer {
   background-color: var(--text-title-color);
 }
 
-.footer-logo {
-  color: #f4f4fd;
-}
+/* .footer-logo {
+  color: var(--button-color);
+} */
 .footer-text {
-  color: #e7e9fc;
+  color: var(--button-border-color);
 }
